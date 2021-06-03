@@ -1,11 +1,12 @@
 products={"pizzas":[
-                {'name':'Napolitana','price':100,'tamaño':'mediana','img':'./img/pizzanormal.png'},
-                {'name':'Vegetariana','price':200,'tamaño':'mediana','img':'./img/pizzaVege.png'},
-                {'name':'Vegetariana','price':200,'tamaño':'mediana','img':'./img/pizzaAjo.png'},
-                ],           
+                {'name':'Napolitana','price':[200,350,450],'sizes':['pequeña','mediana','grande'],'img':'./img/pizzanormal.png'},
+                {'name':'Vegetariana','price':[400,550,550],'sizes':['pequeña','mediana','grande'],'img':'./img/pizzaVege.png'},
+                {'name':'Ajo','price':[100,250,350],'sizes':['pequeña','mediana','grande'],'img':'./img/pizzaAjo.png'},
+                ],
+         
 }
 positions = {
-    "pizzas":{'position':0, 'sizes':0},    
+    "pizzas":{'position':0, 'size':0},    
 }
 document.addEventListener("DOMContentLoaded",function(){
 
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded",function(){
         button.onclick = function(){
             renderElement(this.dataset.target,this.dataset.action)
         }
-    })
+    })    
 })
 
 function renderElement(target,action){
@@ -23,31 +24,50 @@ function renderElement(target,action){
     let size = document.getElementById('tamaño')
     let img = document.getElementById('img-pizza')
     let position = positions[target]['position']
-    if(action=='next-t')
-    {   
-        if(position + 1 > products[target].length - 1)
-        {
-            positions[target]['position'] = 0
-            console.log(positions[target]['position'])
-        }
-        else{
-            positions[target]['position'] += 1
-            console.log(positions[target]['position'])
-        }
-        pizza=products[target][1]
-        name.innerHTML= pizza["name"]
-        price.innerHTML= pizza["price"]
-        size.innerHTML= pizza["tamaño"]
-        img.src= pizza["img"]
-    }else
-    {
-        pizza=info[target][0]
-        document.getElementById('sabor').innerHTML= pizza["name"]
-        document.getElementById('price').innerHTML= pizza["price"]
-        document.getElementById('tamaño').innerHTML= pizza["tamaño"]
-        document.getElementById('img-pizza').src= pizza["img"]
-    }
-   
-    
+    let sizes = positions[target]['size']
 
+    switch (action){
+        case 'next-p':
+            if(positions[target]['position']+1 > products[target].length - 1)
+                position = positions[target]['position'] = 0
+            else           
+                position = positions[target]['position'] += 1           
+
+            break;
+
+        case 'back-p':
+            if(positions[target]['position']-1 < 0)
+                position = positions[target]['position'] = (products[target].length - 1);
+            else
+                position = positions[target]['position'] -= 1            
+
+            break;
+        
+        case 'next-s':
+            if(positions[target]['size']+1>products[target][position]['sizes'].length-1 )
+                sizes = positions[target]['size'] = 0
+            else
+                sizes = positions[target]['size'] +=1
+            break;
+        case 'back-s':
+            if(positions[target]['size']-1   < 0 )
+                sizes = positions[target]['size'] = (products[target][position]['sizes'].length-1 )
+            else
+                sizes = positions[target]['size'] -=1
+            break;
+        default:
+            console.log('click')
+            break;
+        
+    }
+  
+   
+        
+    pizza=products[target][position]
+    name.innerHTML= pizza["name"]
+
+    size.innerHTML= pizza["sizes"][sizes]
+    price.innerHTML= pizza["price"][sizes]
+    
+    img.src= pizza["img"]  
 }
