@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Love Pizza</title>
+  </head>
+  <body>
+    <h1>Pizza time</h1>
+    <div class="cards">
+      <div class="card">
+        <div class="card-header">
+          <h1>Pizza</h1>
+        </div>
+        <div class="card-img">
+          <div class="circle"></div>
+          <img src="./img/pizzanormal.png" id="img-pizza" alt="pizza" />
+        </div>
+        <div class="card-body">
+          <div class="card-opt">
+            <h1 class="card-title">Sabor</h1>
+            <button class="btn-left" data-target="pizzas" data-action="back-t">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                class="bi bi-caret-left-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+                />
+              </svg>
+            </button>
+            <h1 class="card-option" id="sabor">Hawaiana</h1>
+            <button class="btn-right" data-target="pizzas" data-action="next-t">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                class="bi bi-caret-right-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="card-opt">
+            <h1 class="card-title">Tamaño</h1>
+            <button class="btn-left" data-target="pizzas" data-action="back-s">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                class="bi bi-caret-left-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+                />
+              </svg>
+            </button>
+            <h1 class="card-option" id="tamaño">mediana</h1>
+            <button class="btn-right" data-target="pizzas" data-action="next-t">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                class="bi bi-caret-right-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="card-opt">
+            <h1 class="card-title">Valor</h1>
+
+            <h1 class="card-price" id="price">5.000</h1>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h1>Bebida</h1>
+        </div>
+        <div class="card-img">
+          <div class="circle"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-opt">
+            <h1 class="card-title">Sabor</h1>
+            <button class="btn-left">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                class="bi bi-caret-left-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+                />
+              </svg>
+            </button>
+            <h1 class="card-option">Hawaiana</h1>
+            <button class="btn-right">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                class="bi bi-caret-right-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="card-opt">
+            <h1 class="card-title">Tamaño</h1>
+            <button class="btn-left">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                class="bi bi-caret-left-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+                />
+              </svg>
+            </button>
+            <h1 class="card-option">Hawaiana</h1>
+            <button class="btn-right">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                class="bi bi-caret-right-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="card-opt">
+            <h1 class="card-title">Valor</h1>
+
+            <h1 class="card-price">5.000</h1>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h1>Adición</h1>
+        </div>
+        <div class="card-img">
+          <div class="circle"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-opt">
+            <h1 class="card-title">Sabor</h1>
+            <button class="btn-left">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                class="bi bi-caret-left-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+                />
+              </svg>
+            </button>
+            <h1 class="card-option">Hawaiana</h1>
+            <button class="btn-right">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                class="bi bi-caret-right-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="card-opt">
+            <h1 class="card-title">Tamaño</h1>
+            <button class="btn-left">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                class="bi bi-caret-left-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+                />
+              </svg>
+            </button>
+            <h1 class="card-option">Hawaiana</h1>
+            <button class="btn-right">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                class="bi bi-caret-right-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="card-opt">
+            <h1 class="card-title">Valor</h1>
+
+            <h1 class="card-price">5.000</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
