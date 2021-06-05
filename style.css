@@ -3,6 +3,17 @@
   margin: 0%;
   font-family: Arial, Helvetica, sans-serif;
 }
+.header {
+  min-height: 80px;
+  display: flex;
+  background-color: #f14c4c;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f5f5f5;
+}
+.header > h1 {
+  margin: auto;
+}
 
 .cards {
   display: flex;

@@ -8,7 +8,9 @@
     <title>Love Pizza</title>
   </head>
   <body>
-    <h1>Pizza time</h1>
+    <div class="header">
+      <h1>Pizza time</h1>
+    </div>
     <div class="cards">
       <div class="card">
         <div class="card-header">
@@ -16,7 +18,7 @@
         </div>
         <div class="card-img">
           <div class="circle"></div>
-          <img src="./img/pizzanormal.png" id="img-pizza" alt="pizza" />
+          <img id="img-pizzas" alt="pizza" />
         </div>
         <div class="card-body">
           <div class="card-opt">
@@ -34,7 +36,7 @@
                 />
               </svg>
             </button>
-            <h1 class="card-option" id="sabor">Napolitana</h1>
+            <h1 class="card-option" id="sabor-pizzas"></h1>
             <button class="btn-right" data-target="pizzas" data-action="next-p">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +66,7 @@
                 />
               </svg>
             </button>
-            <h1 class="card-option" id="tamaño">pequeña</h1>
+            <h1 class="card-option" id="tamaño-pizzas"></h1>
             <button class="btn-right" data-target="pizzas" data-action="next-s">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +84,7 @@
           <div class="card-opt">
             <h1 class="card-title">Valor</h1>
 
-            <h1 class="card-price" id="price">200</h1>
+            <h1 class="card-price" id="price-pizzas"></h1>
           </div>
         </div>
       </div>
@@ -92,11 +94,12 @@
         </div>
         <div class="card-img">
           <div class="circle"></div>
+          <img id="img-bebidas" alt="bebidas" />
         </div>
         <div class="card-body">
           <div class="card-opt">
             <h1 class="card-title">Sabor</h1>
-            <button class="btn-left">
+            <button class="btn-left" data-target="bebidas" data-action="back-p">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -109,8 +112,12 @@
                 />
               </svg>
             </button>
-            <h1 class="card-option">Hawaiana</h1>
-            <button class="btn-right">
+            <h1 class="card-option" id="sabor-bebidas"></h1>
+            <button
+              class="btn-right"
+              data-target="bebidas"
+              data-action="next-p"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -126,7 +133,7 @@
           </div>
           <div class="card-opt">
             <h1 class="card-title">Tamaño</h1>
-            <button class="btn-left">
+            <button class="btn-left" data-target="bebidas" data-action="back-s">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -139,8 +146,12 @@
                 />
               </svg>
             </button>
-            <h1 class="card-option">Hawaiana</h1>
-            <button class="btn-right">
+            <h1 class="card-option" id="tamaño-bebidas"></h1>
+            <button
+              class="btn-right"
+              data-target="bebidas"
+              data-action="next-s"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -157,7 +168,7 @@
           <div class="card-opt">
             <h1 class="card-title">Valor</h1>
 
-            <h1 class="card-price">5.000</h1>
+            <h1 class="card-price" id="price-bebidas"></h1>
           </div>
         </div>
       </div>
@@ -167,11 +178,16 @@
         </div>
         <div class="card-img">
           <div class="circle"></div>
+          <img id="img-adiciones" alt="Adiciones" />
         </div>
         <div class="card-body">
           <div class="card-opt">
             <h1 class="card-title">Sabor</h1>
-            <button class="btn-left">
+            <button
+              class="btn-left"
+              data-target="adiciones"
+              data-action="back-p"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -184,8 +200,12 @@
                 />
               </svg>
             </button>
-            <h1 class="card-option">Hawaiana</h1>
-            <button class="btn-right">
+            <h1 class="card-option" id="sabor-adiciones"></h1>
+            <button
+              class="btn-right"
+              data-target="adiciones"
+              data-action="next-p"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -201,7 +221,11 @@
           </div>
           <div class="card-opt">
             <h1 class="card-title">Tamaño</h1>
-            <button class="btn-left">
+            <button
+              class="btn-left"
+              data-target="adiciones"
+              data-action="back-s"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -214,8 +238,12 @@
                 />
               </svg>
             </button>
-            <h1 class="card-option">Hawaiana</h1>
-            <button class="btn-right">
+            <h1 class="card-option" id="tamaño-adiciones"></h1>
+            <button
+              class="btn-right"
+              data-target="adiciones"
+              data-action="next-s"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -232,7 +260,7 @@
           <div class="card-opt">
             <h1 class="card-title">Valor</h1>
 
-            <h1 class="card-price">5.000</h1>
+            <h1 class="card-price" id="price-adiciones"></h1>
           </div>
         </div>
       </div>

@@ -3,10 +3,21 @@ products={"pizzas":[
                 {'name':'Vegetariana','price':[400,550,550],'sizes':['pequeña','mediana','grande'],'img':'./img/pizzaVege.png'},
                 {'name':'Ajo','price':[100,250,350],'sizes':['pequeña','mediana','grande'],'img':'./img/pizzaAjo.png'},
                 ],
+            "bebidas":[
+                {'name':'Cocacola','price':[200,350,450],'sizes':['pequeña','mediana','grande'],'img':'./img/soda.png'},
+                {'name':'Manzana','price':[400,550],'sizes':['pequeña','mediana'],'img':'./img/sodaManzana.png'}
+                ],
+            "adiciones":[
+                {'name':'Papas','price':[200,350,450],'sizes':['pequeña','mediana','grande'],'img':'./img/papas.png'},
+                {'name':'Fruta','price':[400,550,550],'sizes':['pequeña','mediana','grande'],'img':'./img/fruto.png'},
+                {'name':'Dulces','price':[100,250,350],'sizes':['pequeña','mediana','grande'],'img':'./img/dulces.png'},
+                ],
          
 }
 positions = {
-    "pizzas":{'position':0, 'size':0},    
+    "pizzas":{'position':0, 'size':0},   
+    "bebidas":{'position':0, 'size':0},  
+    "adiciones":{'position':0, 'size':0},
 }
 document.addEventListener("DOMContentLoaded",function(){
 
@@ -15,14 +26,17 @@ document.addEventListener("DOMContentLoaded",function(){
         button.onclick = function(){
             renderElement(this.dataset.target,this.dataset.action)
         }
-    })    
+    }) 
+    renderElement('pizzas')   
+    renderElement('bebidas') 
+    renderElement('adiciones') 
 })
 
-function renderElement(target,action){
-    let name = document.getElementById('sabor')
-    let price = document.getElementById('price')
-    let size = document.getElementById('tamaño')
-    let img = document.getElementById('img-pizza')
+function renderElement(target,action=1){
+    let name = document.getElementById(`sabor-${target}`)
+    let price = document.getElementById(`price-${target}`)
+    let size = document.getElementById(`tamaño-${target}`)
+    let img = document.getElementById(`img-${target}`)
     let position = positions[target]['position']
     let sizes = positions[target]['size']
 
@@ -56,7 +70,6 @@ function renderElement(target,action){
                 sizes = positions[target]['size'] -=1
             break;
         default:
-            console.log('click')
             break;
         
     }
